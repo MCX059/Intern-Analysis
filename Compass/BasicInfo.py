@@ -39,7 +39,7 @@ class OverallHrefs:
         self._driver = webdriver.Chrome(options=option)
         self._driver.get(self._url)
         self._db = pymysql.connect(
-            'localhost', 'root', 'password', 'zhinanzhe')
+            'localhost', 'root', 'epaiiplus1E0', 'zhinanzhe')
     
     def get_ids(self):
         return self._ids
