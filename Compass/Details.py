@@ -432,7 +432,7 @@ if __name__ == '__main__':
     }
     # 读数据库并保存到df中
     connection = create_engine(
-        'mysql+pymysql://root:epaiiplus1E0@127.0.0.1:3306/zhinanzhe')
+        'mysql+pymysql://root:#####@127.0.0.1:3306/zhinanzhe')
     data = pd.read_sql_table('Pre', connection, index_col='id')
 
     for i in tqdm(range(start, len(data))):
@@ -447,6 +447,6 @@ if __name__ == '__main__':
             log_err(i, con, 'MISSING EVERYTHING')
         else:
             con = pymysql.connect(host='localhost', port=3306,
-                                  user='root', password='epaiiplus1E0', db='zhinanzhe')
+                                  user='root', password='#####', db='zhinanzhe')
             to_database(soup, useful, i, con)
     print('Done!')
